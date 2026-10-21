@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minder Beta | Tu bienestar, organizado</title>
+
+  <style>
+    :root {
+      --azul: #10243b;
+      --azul-claro: #1c3855;
+      --verde: #66e3bb;
+      --fondo: #f3f7fa;
+      --texto: #243447;
+      --blanco: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--fondo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--azul);
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 27px;
+      font-weight: bold;
+      color: var(--verde);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--verde);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--azul), #24516a);
+      color: white;
+      padding: 90px 8%;
+      text-align: center;
+    }
+
+    .etiqueta {
+      display: inline-block;
+      background: #294a60;
+      color: var(--verde);
+      padding: 6px 15px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 65px);
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: var(--verde);
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 auto 28px;
+      color: #e0eaf0;
+      font-size: 18px;
+    }
+
+    .boton {
+      display: inline-block;
+      padding: 13px 23px;
+      margin: 5px;
+      border-radius: 9px;
+      background: var(--verde);
+      color: var(--azul);
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    .boton-secundario {
+      background: transparent;
+      color: white;
+      border: 1px solid #8ba5b9;
+    }
+
+    section {
+      padding: 65px 8%;
+    }
+
+    .titulo {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .titulo h2 {
+      color: var(--azul);
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .titulo p {
+      color: #657587;
+    }
+
+    .tarjetas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .tarjeta {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 5px 20px #10243b0c;
+      border: 1px solid #e4ebf0;
+    }
+
+    .icono {
+      font-size: 35px;
+      margin-bottom: 12px;
+    }
+
+    .tarjeta h3 {
+      color: var(--azul);
+      margin-bottom: 10px;
+    }
+
+    .oscuro {
+      background: var(--azul);
+      color: white;
+    }
+
+    .oscuro .titulo h2 {
+      color: white;
+    }
+
+    .oscuro .titulo p {
+      color: #c4d2df;
+    }
+
+    .oscuro .tarjeta {
+      background: var(--azul-claro);
+      border-color: #34516b;
+      color: #e4edf4;
+    }
+
+    .oscuro .tarjeta h3 {
+      color: var(--verde);
+    }
+
+    .aviso {
+      background: #fff0ef;
+      border: 1px solid #ffc7c2;
+      border-radius: 12px;
+      padding: 22px;
+      margin-top: 25px;
+      color: #702b27;
+    }
+
+    .lista {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .lista li {
+      margin-bottom: 8px;
+    }
+
+    .equipo {
+      text-align: center;
+    }
+
+    .integrante {
+      font-weight: bold;
+      color: var(--azul);
+      margin: 8px;
+    }
+
+    footer {
+      background: #091827;
+      color: #c5d2dc;
+      text-align: center;
+      padding: 28px 8%;
+    }
+
+    footer strong {
+      color: var(--verde);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 65px 6%;
+      }
+
+      section {
+        padding: 48px 6%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">✚ Minder <small>Beta</small></div>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#funciones">Funciones</a>
+      <a href="#agentes">Agentes</a>
+      <a href="#clases">Clases POO</a>
+      <a href="#equipo">Equipo</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <span class="etiqueta">Proyecto académico · POO</span>
+
+      <h1>Tu bienestar,<br><span>siempre organizado.</span></h1>
+
+      <p>
+        Minder es una aplicación móvil que combina recordatorios,
+        herramientas de emergencia y acceso a servicios de salud
+        para facilitar la organización personal y el cuidado del usuario.
+      </p>
+
+      <a href="#funciones" class="boton">Conocer funciones</a>
+      <a href="#clases" class="boton boton-secundario">
+        Explorar proyecto POO
+      </a>
+    </section>
+
+    <section id="funciones">
+      <div class="titulo">
+        <h2>¿Qué ofrece Minder?</h2>
+        <p>Herramientas pensadas para tu organización y seguridad.</p>
+      </div>
+
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <div class="icono">⏰</div>
+          <h3>Recordatorios</h3>
+          <p>
+            Programa tareas y actividades con fecha y hora.
+            Edita, elimina o marca tus recordatorios como cumplidos.
+          </p>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono">🚨</div>
+          <h3>Botón de emergencia</h3>
+          <p>
+            Acceso rápido para iniciar una llamada a la línea
+            de emergencias 123 en Colombia.
+          </p>
+          <a class="boton"
+             href="tel:123"
+             onclick="return confirm('¿Deseas iniciar una llamada al 123?');">
+            Llamar al 123
+          </a>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono">🏥</div>
+          <h3>Mapa de salud</h3>
+          <p>
+            Consulta la idea de un mapa con hospitales y droguerías
+            cercanas, horarios de atención y teléfonos de contacto.
+          </p>
+          <a class="boton"
+             href="https://www.google.com/maps/search/hospitales+y+droguerias+cerca+de+mi/"
+             target="_blank"
+             rel="noopener noreferrer">
+            Explorar mapa
+          </a>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono">👨‍👩‍👧</div>
+          <h3>Contactos de emergencia</h3>
+          <p>
+            Organiza los datos de familiares, amigos y personas
+            de confianza para contactarlos cuando sea necesario.
+          </p>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono">🎙️</div>
+          <h3>Asistente de voz Beta</h3>
+          <p>
+            Una propuesta de interacción por voz para facilitar
+            el uso de la aplicación.
+          </p>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono">📴</div>
+          <h3>Modo sin conexión</h3>
+          <p>
+            Guarda recordatorios y datos localmente. La sincronización
+            con otros dispositivos o servidores se realizará al recuperar
+            la conexión, cuando esa función esté implementada.
+          </p>
+        </article>
+      </div>
+
+      <div class="aviso">
+        <strong>Importante:</strong> esta página es una demostración
+        académica. La llamada telefónica depende del dispositivo y su
+        configuración. El mapa externo no garantiza horarios actualizados,
+        y el envío de alertas, las alarmas programadas y la sincronización
+        real requieren implementar funcionalidades adicionales.
+      </div>
+    </section>
+
+    <section class="oscuro" id="agentes">
+      <div class="titulo">
+        <h2>Agentes del sistema</h2>
+        <p>Personas y entidades que interactúan con Minder.</p>
+      </div>
+
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <h3>👤 Clientes</h3>
+          <ul class="lista">
+            <li>Registrarse e iniciar sesión.</li>
+            <li>Gestionar recordatorios.</li>
+            <li>Consultar servicios de salud.</li>
+            <li>Administrar contactos de emergencia.</li>
+            <li>Usar el asistente de voz.</li>
+          </ul>
+        </article>
+
+        <article class="tarjeta">
+          <h3>🛠️ Administradores</h3>
+          <ul class="lista">
+            <li>Gestionar cuentas de usuario.</li>
+            <li>Actualizar el directorio de salud.</li>
+            <li>Revisar sugerencias y reportes.</li>
+            <li>Supervisar la seguridad del sistema.</li>
+          </ul>
+        </article>
+
+        <article class="tarjeta">
+          <h3>💊 Farmacias</h3>
+          <ul class="lista">
+            <li>Actualizar horarios y teléfonos.</li>
+            <li>Recibir solicitudes de domicilio.</li>
+            <li>Confirmar disponibilidad.</li>
+            <li>Informar tiempos de entrega.</li>
+          </ul>
+        </article>
+
+        <article class="tarjeta">
+          <h3>❤️ Contactos de emergencia</h3>
+          <ul class="lista">
+            <li>Recibir avisos de emergencia.</li>
+            <li>Consultar la ubicación compartida.</li>
+            <li>Recibir notificaciones o SMS.</li>
+            <li>Confirmar la recepción de alertas.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="clases">
+      <div class="titulo">
+        <h2>Programación Orientada a Objetos</h2>
+        <p>Clases principales, atributos, métodos y relaciones del proyecto.</p>
+      </div>
+
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <h3>1. Usuario</h3>
+          <p><strong>Atributos:</strong> nombre, documento, edad,
+            teléfono, correo, contraseña, latitud, longitud y
+            estaConectado.</p>
+          <p><strong>Métodos:</strong></p>
+          <ul class="lista">
+            <li>registrarse()</li>
+            <li>iniciarSesion()</li>
+            <li>cerrarSesion()</li>
+            <li>activarBotonEmergencia()</li>
+            <li>consultarMapa()</li>
+            <li>usarAsistenteVoz()</li>
+            <li>sincronizarDatos()</li>
+            <li>activarCuenta(), suspenderCuenta(),
+              restablecerAcceso()</li>
+          </ul>
+        </article>
+
+        <article class="tarjeta">
+          <h3>2. Recordatorio</h3>
+          <p><strong>Métodos:</strong></p>
+          <ul class="lista">
+            <li>programar()</li>
+            <li>editar()</li>
+            <li>eliminar()</li>
+            <li>activarAlarma()</li>
+            <li>posponer()</li>
+            <li>marcarCumplido()</li>
+            <li>guardarLocal()</li>
+            <li>sincronizar()</li>
+          </ul>
+        </article>
+
+        <article class="tarjeta">
+          <h3>3. ContactoEmergencia</h3>
+          <p><strong>Métodos:</strong></p>
+          <ul class="lista">
+            <li>registrar()</li>
+            <li>editar()</li>
+            <li>eliminar()</li>
+            <li>recibirAviso()</li>
+            <li>enviarNotificacion()</li>
+            <li>enviarSMS()</li>
+            <li>confirmarRecepcion()</li>
+          </ul>
+        </article>
+
+        <article class="tarjeta">
+          <h3>4. Farmacia</h3>
+          <p><strong>Métodos:</strong></p>
+          <ul class="lista">
+            <li>agregarAlDirectorio()</li>
+            <li>actualizarDirectorio()</li>
+            <li>verificarHorario()</li>
+            <li>mostrarEnMapa()</li>
+            <li>actualizarHorario()</li>
+            <li>actualizarContacto()</li>
+            <li>recibirSolicitudDomicilio()</li>
+            <li>confirmarDisponibilidad()</li>
+          </ul>
+        </article>
+
+        <article class="tarjeta">
+          <h3>5. Pedido</h3>
+          <p><strong>Métodos:</strong></p>
+          <ul class="lista">
+            <li>crear()</li>
+            <li>enviarSolicitud()</li>
+            <li>confirmarDisponibilidad()</li>
+            <li>definirTiempoEntrega()</li>
+            <li>actualizarEstado()</li>
+            <li>consultarEstado()</li>
+            <li>cancelar()</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="oscuro" id="relaciones">
+      <div class="titulo">
+        <h2>Herencia y relaciones</h2>
+        <p>Cómo se organiza el modelo orientado a objetos.</p>
+      </div>
+
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <h3>Herencia: ES UNA</h3>
+          <p>
+            <strong>Persona</strong> es la clase padre.
+            <strong>Usuario</strong> y
+            <strong>ContactoEmergencia</strong> son clases hijas.
+          </p>
+          <p>
+            Ambas heredan atributos comunes, como nombre, documento
+            y teléfono, según el diseño de la clase Persona.
+          </p>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Asociación: TIENE UN</h3>
+          <ul class="lista">
+            <li>Usuario tiene recordatorios.</li>
+            <li>Usuario tiene contactos de emergencia.</li>
+            <li>Pedido está asociado a un usuario.</li>
+            <li>Pedido está asociado a una farmacia.</li>
+          </ul>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Validación de teléfono</h3>
+          <p>
+            El atributo teléfono debe contener exactamente
+            10 dígitos numéricos. Si el valor no cumple esta
+            regla, el setter debe rechazarlo.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="equipo">
+      <div class="titulo">
+        <h2>Equipo de desarrollo</h2>
+        <p>Proyecto académico de Programación Orientada a Objetos.</p>
+      </div>
+
+      <div class="tarjetas">
+        <article class="tarjeta equipo">
+          <div class="icono">👨‍💻</div>
+          <p class="integrante">Luis Izquierdo</p>
+        </article>
+
+        <article class="tarjeta equipo">
+          <div class="icono">👨‍💻</div>
+          <p class="integrante">Ángel Madrigal</p>
+        </article>
+
+        <article class="tarjeta equipo">
+          <div class="icono">👨‍💻</div>
+          <p class="integrante">Fabián Sánchez</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Minder Beta</strong> — Tu bienestar, siempre organizado.</p>
+    <p>Proyecto académico de POO · 2026</p>
+  </footer>
+
+</body>
+</html>
